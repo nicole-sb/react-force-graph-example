@@ -13,12 +13,12 @@
   <div id="graph"></div>
 
   <script type="text/jsx">
-    fetch('../datasets/data_large.json').then(res => res.json()).then(data => {
+    fetch('../datasets/data_large_2.json').then(res => res.json()).then(data => {
       ReactDOM.render(
         <ForceGraph3D
           graphData={data}
           nodeLabel={node => `${node.user}: ${node.description}`}
-          nodeAutoColorBy="user"
+          nodeAutoColorBy="description"
           linkDirectionalParticles={1}
         />,
         document.getElementById('graph')
